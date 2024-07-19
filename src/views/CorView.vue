@@ -3,7 +3,7 @@ import { ref, reactive, onMounted } from "vue";
 import CoresApi from "@/api/cores";
 const coresApi = new CoresApi();
 
-const defaultCor = { id: null, descricao: "" };
+const defaultCor = { id: null, nome: "" };
 const cores = ref([]);
 const cor = reactive({ ...defaultCor });
 
@@ -40,7 +40,7 @@ async function excluir(id) {
   <h1>Cor</h1>
   <hr />
   <div class="form">
-    <input type="text" v-model="cor.descricao" placeholder="Descrição" />
+    <input type="text" v-model="cor.nome" placeholder="Nome" />
     <button @click="salvar">Salvar</button>
     <button @click="limpar">Limpar</button>
   </div>
@@ -48,7 +48,7 @@ async function excluir(id) {
   <ul>
     <li v-for="cor in cores" :key="cor.id">
       <span @click="editar(cor)">
-        ({{ cor.id }}) - {{ cor.descricao }} -
+        ({{ cor.id }}) - {{ cor.nome }} -
       </span>
       <button @click="excluir(cor.id)">X</button>
     </li>

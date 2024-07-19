@@ -3,7 +3,7 @@ import { ref, reactive, onMounted } from "vue";
 import MarcasApi from "@/api/marcas";
 const marcasApi = new MarcasApi();
 
-const defaultMarca = { id: null, descricao: "" };
+const defaultMarca = { id: null, name: "" };
 const marcas = ref([]);
 const marca = reactive({ ...defaultMarca });
 
@@ -37,10 +37,10 @@ async function excluir(id) {
 </script>
 
 <template>
-  <h1>Categoria</h1>
+  <h1>Marca</h1>
   <hr />
   <div class="form">
-    <input type="text" v-model="marca.descricao" placeholder="Descrição" />
+    <input type="text" v-model="marca.name" placeholder="Nome" />
     <button @click="salvar">Salvar</button>
     <button @click="limpar">Limpar</button>
   </div>
@@ -48,7 +48,7 @@ async function excluir(id) {
   <ul>
     <li v-for="marca in marcas" :key="marca.id">
       <span @click="editar(marca)">
-        ({{ marca.id }}) - {{ marca.descricao }} -
+        ({{ marca.id }}) - {{ marca.name }} -
       </span>
       <button @click="excluir(marca.id)">X</button>
     </li>

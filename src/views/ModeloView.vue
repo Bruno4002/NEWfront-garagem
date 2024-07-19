@@ -3,7 +3,7 @@ import { ref, reactive, onMounted } from "vue";
 import ModelosApi from "@/api/modelos";
 const modelosApi = new ModelosApi();
 
-const defaultModelo = { id: null, descricao: "" };
+const defaultModelo = { id: null, name: "" };
 const modelos = ref([]);
 const modelo = reactive({ ...defaultModelo });
 
@@ -40,7 +40,7 @@ async function excluir(id) {
   <h1>Modelo</h1>
   <hr />
   <div class="form">
-    <input type="text" v-model="modelo.descricao" placeholder="Descrição" />
+    <input type="text" v-model="modelo.name" placeholder="Nome" />
     <button @click="salvar">Salvar</button>
     <button @click="limpar">Limpar</button>
   </div>
@@ -48,7 +48,7 @@ async function excluir(id) {
   <ul>
     <li v-for="modelo in modelos" :key="modelo.id">
       <span @click="editar(modelo)">
-        ({{ modelo.id }}) - {{ modelo.descricao }} -
+        ({{ modelo.id }}) - {{ modelo.name }} -
       </span>
       <button @click="excluir(modelo.id)">X</button>
     </li>
