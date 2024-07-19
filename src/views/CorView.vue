@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive, onMounted } from "vue";
-import CoressApi from "@/api/acessorios";
+import CoresApi from "@/api/cores";
 const coresApi = new CoresApi();
 
 const defaultCor = { id: null, descricao: "" };
@@ -30,7 +30,7 @@ function editar(cor_para_editar) {
 }
 
 async function excluir(id) {
-  await coressApi.excluirCor(id);
+  await coresApi.excluirCor(id);
   cores.value = await coresApi.buscarTodasAsCores();
   limpar();
 }
