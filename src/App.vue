@@ -57,12 +57,6 @@ header {
   background-color: black;
  
 }
-.Itens router-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 10px;
-  margin-right: 10px;
-}
 
 main {
   display: flex;
@@ -72,8 +66,7 @@ main {
   justify-content: center;
   padding: 25vh;
   height: 100% ;
-  height: 90%;
-  
+  color: aliceblue;
  
 }
 

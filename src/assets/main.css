@@ -1,10 +1,10 @@
 @import "./base.css";
 
 body{
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(97, 97, 97);
   margin: 0;
   padding: 0;
-  text-decoration: none;
+
 }
 /* #app {
   max-width: 1280px;
@@ -17,7 +17,7 @@ body{
 a,
 .green {
   text-decoration: none;
-  color: rgb(179, 170, 170);
+  color: rgb(255, 255, 255);
   transition: 0.4s;
 }
 
