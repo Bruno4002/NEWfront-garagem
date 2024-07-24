@@ -38,13 +38,11 @@ async function excluir(id) {
 
 <template>
   <h1>Modelo</h1>
-  <hr />
   <div class="form">
     <input type="text" v-model="modelo.name" placeholder="Nome" />
     <button @click="salvar">Salvar</button>
     <button @click="limpar">Limpar</button>
   </div>
-  <hr />
   <ul>
     <li v-for="modelo in modelos" :key="modelo.id">
       <span @click="editar(modelo)">

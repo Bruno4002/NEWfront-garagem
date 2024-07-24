@@ -38,13 +38,11 @@ async function excluir(id) {
 
 <template>
   <h1>Cor</h1>
-  <hr />
   <div class="form">
     <input type="text" v-model="cor.nome" placeholder="Nome" />
     <button @click="salvar">Salvar</button>
     <button @click="limpar">Limpar</button>
   </div>
-  <hr />
   <ul>
     <li v-for="cor in cores" :key="cor.id">
       <span @click="editar(cor)">

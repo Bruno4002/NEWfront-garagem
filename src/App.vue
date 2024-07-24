@@ -73,6 +73,7 @@ main {
   padding: 25vh;
   height: 100% ;
   height: 90%;
+  
  
 }
 
