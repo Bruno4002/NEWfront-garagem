@@ -8,10 +8,12 @@ import ModeloView from "../views/ModeloView.vue";
 import VeiculoView from "../views/VeiculoView.vue";
 import LoginView from "../views/LoginView.vue";
 import LogoutView from "../views/LogoutView.vue";
+import LayoutFull from "../layouts/LayoutFull.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+  
     {
       path: "/",
       name: "home",
@@ -57,7 +59,10 @@ const router = createRouter({
       name: "logout",
       component: LogoutView,
     }
-  ],
+//   ],
+// },
+],
+
 });
 
 export default router;

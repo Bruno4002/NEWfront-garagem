@@ -1,15 +1,14 @@
 <script setup>
-import NormalHeader from "@/components/templates/NormalHeader.vue";
+import SmallHeader from "@/components/templates/small/SmallHeader.vue";
 </script>
 <template>
-    <div id="NormalSize">
+    <div id="SmallSize">
         <header>
-            <NormalHeader/>
+            <SmallHeader/>
         </header>
     
         <main>
             <RouterView/>
         </main>
-
     </div>
 </template>
