@@ -9,7 +9,7 @@ const authStore = useAuthStore();
 
 <template>
   <header>
-    
+  
     <div class="Itens">
       <router-link :to="{ name: 'home' }">Home</router-link> 
       <router-link to="/categorias">Categorias</router-link> 
@@ -21,7 +21,7 @@ const authStore = useAuthStore();
     </div>
     <div v-if="authStore.loggedIn">
       {{ authStore.user.email }}
-    <router-link  to="/logout">Logout</router-link> 
+    <router-link id="Logout"  to="/logout">Logout</router-link> 
     </div>
     <router-link v-else to="/login">Login</router-link>
     
@@ -68,6 +68,9 @@ main {
   height: 100% ;
   color: aliceblue;
  
+}
+#Logout {
+  color: rgb(255, 0, 0);
 }
 
 </style>
