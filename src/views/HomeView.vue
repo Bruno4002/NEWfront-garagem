@@ -26,5 +26,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <product-list />
+<h1>Garagem</h1>
+
 </template>
+<style scoped>
+h1{
+  font-size: 100px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+</style>

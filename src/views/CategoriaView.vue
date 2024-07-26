@@ -37,20 +37,33 @@ async function excluir(id) {
 </script>
 
 <template>
-  <h1>Categoria</h1>
-  <div class="form">
-    <input type="text" v-model="categoria.descricao" placeholder="Descrição" />
-    <button @click="salvar()">Salvar</button>
-    <button @click="limpar()">Limpar</button>
+  <div class="container">
+    <h1>Categoria</h1>
+    <div class="form">
+      <input type="text" v-model="categoria.descricao" placeholder="Descrição" />
+      <button @click="salvar()">Salvar</button>
+      <button @click="limpar()">Limpar</button>
+    </div>
+    <ul>
+      <li v-for="categoria in categorias" :key="categoria.id">
+        <span @click="editar(categoria)">
+          ({{ categoria.id }}) - {{ categoria.descricao }} -
+        </span>
+        <button @click="excluir(categoria.id)">X</button>
+      </li>
+    </ul>
+
   </div>
-  <ul>
-    <li v-for="categoria in categorias" :key="categoria.id">
-      <span @click="editar(categoria)">
-        ({{ categoria.id }}) - {{ categoria.descricao }} -
-      </span>
-      <button @click="excluir(categoria.id)">X</button>
-    </li>
-  </ul>
 </template>
 
-<style></style>
+<style scoped>
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 20vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  color: rgb(216, 214, 214) ;
+}
+</style>

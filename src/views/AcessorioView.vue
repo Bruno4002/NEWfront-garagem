@@ -37,6 +37,7 @@ async function excluir(id) {
 </script>
 
 <template>
+<div class="container">
   <h1>Acessorio</h1>
   <div class="form">
     <input type="text" v-model="acessorio.descricao" placeholder="Descrição" />
@@ -51,6 +52,18 @@ async function excluir(id) {
       <button @click="excluir(acessorio.id)">X</button>
     </li>
   </ul>
+
+</div>
 </template>
 
-<style></style>
+<style scoped>
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 20vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  color: rgb(216, 214, 214) ;
+}
+</style>

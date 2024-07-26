@@ -16,6 +16,7 @@
     "pinia": "^2.0.14",
     "vite-plugin-pwa": "^0.20.1",
     "vue": "^3.2.37",
+    "vue-material-design-icons": "^5.3.0",
     "vue-router": "^4.1.2",
     "workbox-precaching": "^7.1.0"
   },

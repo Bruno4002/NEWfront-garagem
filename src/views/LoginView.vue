@@ -9,4 +9,10 @@ import "@passageidentity/passage-elements/passage-auth";
   </div>
 </template>
 
-<style></style>
+<style scoped>
+h1{
+
+  text-align: center;
+  color: rgb(216, 214, 214);
+}
+</style>

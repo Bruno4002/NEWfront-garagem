@@ -37,22 +37,36 @@ async function excluir(id) {
 </script>
 
 <template>
-  <h1>Veiculo</h1>
-  <div class="form">
-    <input type="text" v-model="veiculo.modelo" placeholder="Modelo" />
-    <input type="text" v-model="veiculo.modelo" placeholder="Ano" />
-    <input type="text" v-model="veiculo.modelo" placeholder="Preço" />
-    <button @click="salvar">Salvar</button>
-    <button @click="limpar">Limpar</button>
+  <div class="container">
+
+    <h1>Veiculo</h1>
+    <div class="form">
+      <input type="text" v-model="veiculo.modelo" placeholder="Modelo" />
+      <input type="text" v-model="veiculo.modelo" placeholder="Ano" />
+      <input type="text" v-model="veiculo.modelo" placeholder="Preço" />
+      <button @click="salvar">Salvar</button>
+      <button @click="limpar">Limpar</button>
+    </div>
+    <ul>
+      <li v-for="veiculo in veiculos" :key="veiculo.id">
+        <span @click="editar(veiculo)">
+          ({{ veiculo.id }}) - {{ veiculo.modelo }} -
+        </span>
+        <button @click="excluir(veiculo.id)">X</button>
+      </li>
+    </ul>
+
   </div>
-  <ul>
-    <li v-for="veiculo in veiculos" :key="veiculo.id">
-      <span @click="editar(veiculo)">
-        ({{ veiculo.id }}) - {{ veiculo.modelo }} -
-      </span>
-      <button @click="excluir(veiculo.id)">X</button>
-    </li>
-  </ul>
 </template>
 
-<style></style>
+<style setup>
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 20vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  color: rgb(216, 214, 214) ;
+}
+</style>
